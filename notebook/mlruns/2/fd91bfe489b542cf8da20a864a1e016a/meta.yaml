@@ -1,0 +1,15 @@
+artifact_uri: file:///home/marcelo/code-workspace/puc/airflow-v1/notebook/mlruns/2/fd91bfe489b542cf8da20a864a1e016a/artifacts
+end_time: 1651535023158
+entry_point_name: ''
+experiment_id: '2'
+lifecycle_stage: active
+name: ''
+run_id: fd91bfe489b542cf8da20a864a1e016a
+run_uuid: fd91bfe489b542cf8da20a864a1e016a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1651535019930
+status: 3
+tags: []
+user_id: marcelo

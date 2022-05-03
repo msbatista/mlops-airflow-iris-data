@@ -1,0 +1,4 @@
+artifact_location: file:///airflow/dags/mlruns/4
+experiment_id: '4'
+lifecycle_stage: active
+name: svc-iris-db-classifier-v1

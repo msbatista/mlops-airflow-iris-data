@@ -1,0 +1,15 @@
+artifact_uri: iris-db-classifier-v1/1/dee1cb17dbe14adc82445cc4240c2c9f/artifacts
+end_time: 1651535107712
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: dee1cb17dbe14adc82445cc4240c2c9f
+run_uuid: dee1cb17dbe14adc82445cc4240c2c9f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1651535104510
+status: 4
+tags: []
+user_id: marcelo

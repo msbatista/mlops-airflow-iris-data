@@ -1,0 +1,6 @@
+sepal_length,sepal_width,petal_length,petal_width,class,classEncoder,messageError
+15.0,3.9,1.7,0.4,Iris-setosa,0,"sepal_length must be within (4.3, 7.9) range."
+5.7,15.0,1.5,0.4,Iris-setosa,0,"sepal_width must be within (1.0, 4.4) range."
+4.6,15.0,1.0,0.2,Iris-setosa,0,"sepal_width must be within (1.0, 4.4) range."
+5.0,3.0,1.6,20.0,Iris-setosa,0,"petal_length must be within (0.1, 2.5) range."
+5.2,3.4,39.0,0.2,Iris-setosa,0,"petal_length must be within (1.0, 6.9) range."

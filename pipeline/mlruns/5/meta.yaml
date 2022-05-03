@@ -1,0 +1,4 @@
+artifact_location: file:///airflow/dags/mlruns/5
+experiment_id: '5'
+lifecycle_stage: active
+name: rfc-iris-db-classifier-v2
