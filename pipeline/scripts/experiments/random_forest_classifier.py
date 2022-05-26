@@ -84,10 +84,10 @@ def main() -> None:
 
     experiment_id = None
 
-    try:
+    experiment_id = dict(mlflow.get_experiment_by_name(EXPERIMENT_NAME)).get("experiment_id", None)
+
+    if experiment_id is None:
         experiment_id = mlflow.create_experiment(EXPERIMENT_NAME)
-    except Exception:
-        experiment_id = mlflow.get_experiment_by_name(EXPERIMENT_NAME).experiment_id
     
     print("experiment_id: %s" % experiment_id)
 
