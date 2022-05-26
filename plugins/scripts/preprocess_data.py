@@ -1,7 +1,7 @@
-from ctypes import Union
 import os
 import pandas as pd
-from typing import List
+from typing import Union, Any
+from sklearn import preprocessing
 
 
 def categorise_data(row) -> str:
@@ -31,7 +31,7 @@ def write_data(file: str, df: pd.DataFrame, sep: str = ',') -> None:
 
 
 def clean_data(df: pd.DataFrame, returnBadResults=True) -> Union[pd.DataFrame, pd.DataFrame]:
-    # TODO: Define the valid data range into dictionary so that if it is need to changed the task will be performed only in one place. 
+    # TODO: Define the valid data range into dictionary so that if it is need to changed the task will be performed only in one place.
     # TODO: Maybe use pandas schema too to simplify the code.
     cleaned_data_df = df[
         (df['sepal_length'].between(4.3, 7.9)) &
@@ -55,6 +55,13 @@ def clean_data(df: pd.DataFrame, returnBadResults=True) -> Union[pd.DataFrame, p
     return (cleaned_data_df, non_conformant_df)
 
 
+def encode(df: pd.DataFrame, name: str, encoder: str) -> Any:
+    le = preprocessing.LabelEncoder()
+    df[encoder] = le.fit_transform(df[name])
+
+    return le.classes_
+
+
 def main() -> None:
     DATA_DIR = '../data'
     RAW_DATASET = 'raw/iris.txt'
@@ -67,6 +74,10 @@ def main() -> None:
 
     cleaned_df, non_conformant_df = clean_data(
         df=df_iris, returnBadResults=True)
+
+    classes = encode(df=cleaned_df, name='class', encoder='classEncoder')
+
+    print(classes)
 
     write_data(file=os.path.join(DATA_DIR, CLEANED_DATASET), df=cleaned_df)
     write_data(file=os.path.join(
